@@ -10,3 +10,12 @@ body {
 #langdrop {
   width: 75px;
 }
+
+.selects {
+  font-size: 30px;
+}
+
+.textareas {
+  width: 25%;
+  height: 200px;
+}

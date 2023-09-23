@@ -15,13 +15,13 @@
     </div>
     <div>
       <form action="{{url_for('main')}}" method="POST">
-        {{ form.selectin.label }}: {{ form.selectin }}
+        {{ form.selectin.label(class='selects') }}: {{ form.selectin }}
         <br />
-        {{ form.textin }}
+        {{ form.textin(class='textareas') }}
         <br />
-        {{ form.selectout.label }}: {{ form.selectout }}
+        {{ form.selectout.label(class='selects') }}: {{ form.selectout }}
         <br />
-        {{ form.textout }}
+        {{ form.textout(class='textareas') }}
         <br />
         {{ form.submit }}
       </form>
