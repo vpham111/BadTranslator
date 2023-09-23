@@ -21,7 +21,6 @@ def main():
         in_lang = form.selectin.data
         text_in = form.textin.data
         out_lang = form.selectout.data
-        print(in_lang, text_in, out_lang)
         payload = {
 	        "from": f"{in_lang}",
 	        "to": f"{out_lang}",
