@@ -1,10 +1,10 @@
 from wtforms import SelectField, TextAreaField, SubmitField
-from wtforms.validators import NoneOf
+from wtforms.validators import NoneOf, InputRequired
 from flask_wtf import FlaskForm
 
 class LanguageForm(FlaskForm):
-    selectin = SelectField('Select Input Language', validators=[NoneOf('Select')], choices=[('Select', ''), ('Spanish', 'Spanish'), ('French', 'French'), ('German', 'German'), ('Chinese', 'Chinese'), ('English', 'English'), ('Japanese', 'Japanese')])
-    textin = TextAreaField('TextIn')
-    selectout = SelectField('Select Output Language', validators=[NoneOf('Select')], choices=[('Select', ''), ('Spanish', 'Spanish'), ('French', 'French'), ('German', 'German'), ('Chinese', 'Chinese'), ('English', 'English'), ('Japanese', 'Japanese')])
+    selectin = SelectField('Select Input Language', choices=[('Select', ''), ('es', 'Spanish'), ('fr', 'French'), ('de', 'German'), ('zh', 'Chinese'), ('en', 'English'), ('jp', 'Japanese')])
+    textin = TextAreaField('TextIn', validators=[InputRequired()])
+    selectout = SelectField('Select Output Language', choices=[('Select', ''), ('es', 'Spanish'), ('fr', 'French'), ('de', 'German'), ('zh', 'Chinese'), ('en', 'English'), ('jp', 'Japanese')])
     textout = TextAreaField('TextOut')
     submit = SubmitField('Translate')
