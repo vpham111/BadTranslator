@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bootleg Google Translate</title>
+    <link
+      href="{{url_for('static', filename='styles.css')}}"
+      rel="stylesheet"
+    />
+    <script src="main.py"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Bootleg Google Translate</h1>
+    </div>
+    <div>
+      <form>
+        <label for="langdrop">Select Output Langauge</label>
+        <select name="dropdown" id="langdrop">
+          <option value="Select">Select</option>
+          <option value="Spanish">Spanish</option>
+          <option value="French">French</option>
+          <option value="German">German</option>
+          <option value="Chinese">Chinese</option>
+          <option value="English">English</option>
+          <option value="Japanese">Japanese</option>
+        </select>
+      </form>
+    </div>
+  </body>
+</html>

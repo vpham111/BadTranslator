@@ -1,0 +1,12 @@
+#header {
+  color: blue;
+  text-align: center;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#langdrop {
+  width: 75px;
+}
