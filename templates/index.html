@@ -14,17 +14,16 @@
       <h1>Bootleg Google Translate</h1>
     </div>
     <div>
-      <form>
-        <label for="langdrop">Select Output Langauge</label>
-        <select name="dropdown" id="langdrop">
-          <option value="Select">Select</option>
-          <option value="Spanish">Spanish</option>
-          <option value="French">French</option>
-          <option value="German">German</option>
-          <option value="Chinese">Chinese</option>
-          <option value="English">English</option>
-          <option value="Japanese">Japanese</option>
-        </select>
+      <form action="{{url_for('main')}}" method="POST">
+        {{ form.selectin.label }}: {{ form.selectin }}
+        <br />
+        {{ form.textin }}
+        <br />
+        {{ form.selectout.label }}: {{ form.selectout }}
+        <br />
+        {{ form.textout }}
+        <br />
+        {{ form.submit }}
       </form>
     </div>
   </body>
